@@ -1,0 +1,77 @@
+@import 'react-toastify/dist/ReactToastify.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #09090b;
+    color: white;
+    overflow: hidden;
+  }
+}
+
+@layer components {
+  .image-slide-enter {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  
+  .image-slide-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 400ms ease-out, transform 400ms ease-out;
+  }
+  
+  .image-slide-exit {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .image-slide-exit-active {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 400ms ease-out, transform 400ms ease-out;
+  }
+}
+
+/* Toast Styling */
+.Toastify__toast-container {
+  z-index: 9999;
+}
+
+.Toastify__toast {
+  background: rgba(24, 24, 27, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 12px;
+  color: white;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 14px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgba(99, 102, 241, 0.1);
+}
+
+.Toastify__progress-bar {
+  background: linear-gradient(90deg, #6366f1, #f59e0b);
+}
+
+.Toastify__close-button {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.Toastify__close-button:hover {
+  color: white;
+}
