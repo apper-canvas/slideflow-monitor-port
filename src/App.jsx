@@ -10,6 +10,7 @@ import ErrorPage from '@/components/pages/ErrorPage';
 import ResetPassword from '@/components/pages/ResetPassword';
 import PromptPassword from '@/components/pages/PromptPassword';
 import SliderPage from "@/components/pages/SliderPage";
+import TaskListPage from "@/components/pages/TaskListPage";
 
 // Create auth context
 export const AuthContext = createContext(null);
@@ -124,7 +125,8 @@ function AppContent() {
           <Route path="/error" element={<ErrorPage />} />
           <Route path="/prompt-password/:appId/:emailAddress/:provider" element={<PromptPassword />} />
           <Route path="/reset-password/:appId/:fields" element={<ResetPassword />} />
-          <Route path="/" element={<SliderPage />} />
+<Route path="/" element={<SliderPage />} />
+          <Route path="/tasks" element={<TaskListPage />} />
         </Routes>
         
         <ToastContainer
